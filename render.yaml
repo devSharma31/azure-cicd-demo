@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: azure-cicd-demo
+    env: python
+    plan: free
+    region: frankfurt            # or oregon/virginia (pick one)
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn -w 2 -b 0.0.0.0:$PORT app:app
+    autoDeploy: true
+    healthCheckPath: /health     # lets Render show health status
+    envVars: []                  # add env vars here later if needed
