@@ -1,3 +1,5 @@
+![CI](https://github.com/devSharma31/azure-cicd-demo/actions/workflows/ci.yml/badge.svg)
+
 # Azure CI/CD Demo – Flask on Azure App Service
 
 This repo is a **Day 1** DevOps portfolio project: a tiny Flask app deployed to **Azure App Service** via **GitHub Actions**.
