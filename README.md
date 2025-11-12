@@ -5,12 +5,14 @@
 **Live:** https://azure-cicd-demo.onrender.com/health
 
 ## What this shows
-- Basic **Python/Flask** web app
-- **CI/CD** with GitHub Actions
-- Automatic deploys to **Azure App Service (Linux, Python)** on every push to `main`
+- Basic Python/Flask web app with `/health`
+- CI via GitHub Actions (lint/build)
+- **Option A (free):** Auto-deploys to **Render** on every push to `main`
+- **Option B (Azure):** Deploys to **Azure App Service** with `azure/webapps-deploy`
 
 ## Quick links
 - Pipeline YAML: `/.github/workflows/ci.yml`
+- Azure deploy YAML: `/.github/workflows/azure-webapp.yml`
 - App entrypoint: `/app/main.py`
 - Live check: open the health URL abov
 
@@ -18,13 +20,16 @@
 ## Local run
 ```bash
 python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
+# Windows: .venv\Scripts\activate
+# macOS/Linux:
+source .venv/bin/activate
+
 pip install -r requirements.txt
-python app.py  # http://127.0.0.1:8000
+python app.py  # http://127.0.0.1:8000/health
 ```
 
 
-Deploy (Render – free, recommended now)
+Deploy (Render — free, recommended for live demo)
 
 Render auto-builds from GitHub on push.
 
