@@ -9,6 +9,12 @@
 - **CI/CD** with GitHub Actions
 - Automatic deploys to **Azure App Service (Linux, Python)** on every push to `main`
 
+## Quick links
+- Pipeline YAML: `/.github/workflows/ci.yml`
+- App entrypoint: `/app/main.py`
+- Live check: open the health URL abov
+
+
 ## Local run
 ```bash
 python -m venv .venv
